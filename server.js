@@ -26,8 +26,8 @@ app.use(methodOverride(function (req, res) {
 
 
 rotasTarefas(app); 
-app.listen(process.env.PORT, () => {
-  console.log("Iniciado com sucesso")});
+app.listen(port, () => 
+  console.log("Iniciado com sucesso"));
 
 module.exports = app; 
 
