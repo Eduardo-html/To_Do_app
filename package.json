@@ -23,7 +23,7 @@
     "nodemon": "^2.0.4",
     "sqlite3": "^5.0.0"
   },
-  "engines":{
+  "engines": {
     "node": "14.X"
   }
 }
