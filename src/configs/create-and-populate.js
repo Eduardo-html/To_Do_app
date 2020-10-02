@@ -1,10 +1,10 @@
 const sqlite3 = require('sqlite3').verbose();
-const db = new sqlite3.Database('./database.db');
+const db = new sqlite3.Database('../../src/configs/database.db');
 
 
 const TAREFAS_SCHEMA = `
 CREATE TABLE IF NOT EXISTS TAREFAS (
-    id INTEGER PRIMARY KEY AUTOINCREMENT, 
+    id_tarefas INTEGER PRIMARY KEY AUTOINCREMENT, 
     titulo VARCHAR(64),
     descricao TEXT,
     status VARCHAR(32)
