@@ -17,9 +17,9 @@ INSERT INTO TAREFAS (
     descricao,
     status
     )
-VALUES ('Yoga', 'Fazer yoga segunda e quarta', 'Continuo'),
-       ('Médico', 'Consulta com Dr. Ayrton sexta', 'TODO'),
-       ('Pagar contas', 'Pagar boletos de água e luz', 'DOING')
+    VALUES  ('Resilia', 'Seg a Quinta Estudos', 'DOING'),
+            ('Mentoria', 'Sexta as 16:30h', 'TODO'),
+            ('Descanso', 'Domingo 24h', 'DOING')
 `
 
 db.serialize( ()=> {

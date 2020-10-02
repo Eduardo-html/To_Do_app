@@ -1,19 +1,18 @@
-const db = require('../configs/db');
 const TarefasController = require('../controllers/tarefas-controller');
+const DeletaController = require('../controllers/deleta-controller');
+const AdicionaController = require('../controllers/adiciona-controller');
+const AtualizarController = require('../controllers/atualiza-controller');
 
-const tarefasController = new TarefasController(db);
 
 module.exports = (app) => {
 
-app.get('/', tarefasController.homeTarefas());
+  app.get('/', TarefasController.homeTarefas()); 
 
-app.delete('/tarefas;:id', (req,resp)=>{
-    console.log(`Deletei no banco tarefas: ${req.params.id}`);
-    resp.json({'response': 'ok'});
-});
+  app.post('/tarefas', AdicionaController.addTarefas());
 
-app.post('/testeRapido', (req, resp) => {
-    resp.send("Caminho sendo testado!");
-});
+  app.put('/tarefas/:id', AtualizarController.atualizaTarefa());
+
+  app.delete('/tarefas/:id', DeletaController.deletaTarefa());
 
 }
+
