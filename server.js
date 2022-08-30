@@ -6,7 +6,9 @@ const methodOverride = require('method-override')
 const cors = require('cors')
 
 const app = express();
-const port = process.env.PORT || 3000;
+// const port = process.env.PORT || 3000;
+const port = 3000;
+
 
 
 app.use(cors());
@@ -24,12 +26,12 @@ app.use(methodOverride(function (req, res) {
 }))
 
 
-rotasTarefas(app); 
-app.listen(process.env.Port, ()=>{ 
-  console.log("Iniciado com sucesso")});
 // rotasTarefas(app); 
-// app.listen(port, () => 
-//   console.log("Iniciado com sucesso"));
+// app.listen(process.env.Port, ()=>{ 
+//   console.log("Iniciado com sucesso")});
+rotasTarefas(app); 
+app.listen(port, () => 
+  console.log("Iniciado com sucesso"));
 
 module.exports = app; 
 
