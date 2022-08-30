@@ -1,4 +1,4 @@
-# API TODO_APP utilizando NojeJS.
+# API TODO_APP utilizando NodeJS.
 
 #### START 
 para iniciar o projeto siga os passos: 
